@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const HabitTracker = ({ habits, setHabits }) => {
@@ -10,6 +9,11 @@ const HabitTracker = ({ habits, setHabits }) => {
       setHabits([...habits, { name: newHabit, records: {} }]);
       setNewHabit('');
     }
+  };
+
+  const handleDeleteHabit = (habitIndex) => {
+    const newHabits = habits.filter((_, index) => index !== habitIndex);
+    setHabits(newHabits);
   };
 
   const changeWeek = (offset) => {
@@ -103,7 +107,15 @@ const HabitTracker = ({ habits, setHabits }) => {
         <tbody>
           {habits.map((habit, habitIndex) => (
             <tr key={habitIndex}>
-              <td className="habit-name">{habit.name}</td>
+              <td className="habit-name">
+                {habit.name}
+                <button 
+                  onClick={() => handleDeleteHabit(habitIndex)} 
+                  className="btn btn-danger btn-sm ms-2 delete-habit"
+                >
+                  削除
+                </button>
+              </td>
               {weekDays.map((day, dayIndex) => {
                 const dateKey = day.toISOString().split('T')[0];
                 const status = (habit.records || {})[dateKey] || 'none';

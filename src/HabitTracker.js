@@ -117,7 +117,7 @@ const HabitTracker = ({ habits, setHabits }) => {
                   </td>
                 );
               })}
-              <td>{Object.values(habit.records).filter(r => r === 'ok').length}</td>
+              <td>{Object.values(habit.records || {}).filter(r => r === 'ok').length}</td>
             </tr>
           ))}
         </tbody>

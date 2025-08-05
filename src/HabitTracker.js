@@ -106,7 +106,7 @@ const HabitTracker = ({ habits, setHabits }) => {
               <td className="habit-name">{habit.name}</td>
               {weekDays.map((day, dayIndex) => {
                 const dateKey = day.toISOString().split('T')[0];
-                const status = habit.records[dateKey] || 'none';
+                const status = (habit.records || {})[dateKey] || 'none';
                 return (
                   <td 
                     key={dayIndex} 

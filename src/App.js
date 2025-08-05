@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
+import HabitTracker from './HabitTracker';
+import Reflection from './Reflection';
 import './App.css';
 
 function App() {
+  const [habits, setHabits] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>習慣チェッカー</h1>
       </header>
+      <main>
+        <div className="habit-tracker-container">
+          <HabitTracker habits={habits} setHabits={setHabits} />
+        </div>
+        <div className="reflection-container">
+          <Reflection />
+        </div>
+      </main>
     </div>
   );
 }

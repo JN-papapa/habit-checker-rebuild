@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/habit-checker-rebuild/static/css/main.8ead61d2.css",
+    "main.js": "/habit-checker-rebuild/static/js/main.9f711432.js",
+    "static/js/453.ebb6fb60.chunk.js": "/habit-checker-rebuild/static/js/453.ebb6fb60.chunk.js",
+    "index.html": "/habit-checker-rebuild/index.html",
+    "main.8ead61d2.css.map": "/habit-checker-rebuild/static/css/main.8ead61d2.css.map",
+    "main.9f711432.js.map": "/habit-checker-rebuild/static/js/main.9f711432.js.map",
+    "453.ebb6fb60.chunk.js.map": "/habit-checker-rebuild/static/js/453.ebb6fb60.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ead61d2.css",
+    "static/js/main.9f711432.js"
+  ]
+}

@@ -113,7 +113,7 @@ const HabitTracker = ({ habits, setHabits }) => {
                   onClick={() => handleDeleteHabit(habitIndex)} 
                   className="btn btn-danger btn-sm ms-2 delete-habit"
                 >
-                  削除
+                  ✖
                 </button>
               </td>
               {weekDays.map((day, dayIndex) => {

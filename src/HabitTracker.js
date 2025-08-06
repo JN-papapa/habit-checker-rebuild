@@ -111,7 +111,7 @@ const HabitTracker = ({ habits, setHabits }) => {
                 {habit.name}
                 <button 
                   onClick={() => handleDeleteHabit(habitIndex)} 
-                  className="btn btn-danger btn-sm ms-2 delete-habit"
+                  className="delete-habit"
                 >
                   ✖
                 </button>

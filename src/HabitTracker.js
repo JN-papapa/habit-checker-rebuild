@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const HabitTracker = ({ habits, setHabits }) => {
-  const [newHabit, setNewHabit] = useState('');
-  const [currentDate, setCurrentDate] = useState(new Date());
+const HabitTracker = ({ habits, setHabits, currentDate, setCurrentDate }) => {
 
   const handleAddHabit = () => {
     if (newHabit.trim() !== '') {
@@ -78,6 +76,8 @@ const HabitTracker = ({ habits, setHabits }) => {
     if (status === 'triangle') return '△';
     return '';
   }
+  
+  const [newHabit, setNewHabit] = React.useState('');
 
   return (
     <div>
@@ -106,8 +106,7 @@ const HabitTracker = ({ habits, setHabits }) => {
         </thead>
         <tbody>
           {habits.map((habit, habitIndex) => (
-            <tr key={habitIndex}>
-              <td className="habit-name">
+            <tr key={habitIndex}>              <td className="habit-name">
                 {habit.name}
                 <button 
                   onClick={() => handleDeleteHabit(habitIndex)} 
